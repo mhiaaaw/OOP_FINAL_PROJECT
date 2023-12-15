@@ -1,0 +1,1190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{36937BFC-D42A-42D3-9FE6-347DE8AB1E06}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>E_BOTO</RootNamespace>
+    <AssemblyName>E-BOTO</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\Downloads\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminDashb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashb.Designer.cs">
+      <DependentUpon>AdminDashb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminVotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminVotes.Designer.cs">
+      <DependentUpon>AdminVotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CandidateCreate.Designer.cs">
+      <DependentUpon>CandidateCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CandidateDelete.Designer.cs">
+      <DependentUpon>CandidateDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CandidateUpdate.Designer.cs">
+      <DependentUpon>CandidateUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl1.Designer.cs">
+      <DependentUpon>CustomControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet231.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet231.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Candidacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>Candidacy.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionDatabaseDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectionDatabaseDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingScreen.Designer.cs">
+      <DependentUpon>LoadingScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCandidates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserCandidates.Designer.cs">
+      <DependentUpon>UserCandidates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserProfile.Designer.cs">
+      <DependentUpon>UserProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserViewCandidateInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserViewCandidateInfo.Designer.cs">
+      <DependentUpon>UserViewCandidateInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserVote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserVote.Designer.cs">
+      <DependentUpon>UserVote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserVoteCandidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserVoteCandidate.Designer.cs">
+      <DependentUpon>UserVoteCandidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserListCandidates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserListCandidates.Designer.cs">
+      <DependentUpon>UserListCandidates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLandingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLandingPage.Designer.cs">
+      <DependentUpon>UserLandingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineVoting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OnlineVoting.Designer.cs">
+      <DependentUpon>OnlineVoting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoterCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoterCreate.Designer.cs">
+      <DependentUpon>VoterCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoterDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoterDelete.Designer.cs">
+      <DependentUpon>VoterDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VotersCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VotersCRUD.Designer.cs">
+      <DependentUpon>VotersCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VotersDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VotersDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VotersDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VotersDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VotersDatabaseDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VotersDatabaseDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VotersDatabaseDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VotersDatabaseDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VotersDatabaseDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VotersDatabaseDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VotersDatabaseDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VotersDatabaseDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VotersDatabaseDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VotersDatabaseDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VotersDatabaseDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VotersDatabaseDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VotersDatabaseDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VotersDatabaseDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VotersDatabaseDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VotersDatabaseDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLogin.Designer.cs">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LandingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LandingPage.Designer.cs">
+      <DependentUpon>LandingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VotersDatabaseDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VotersDatabaseDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VotersDatabaseDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VotersDatabaseDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VoterUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoterUpdate.Designer.cs">
+      <DependentUpon>VoterUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Votes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Votes.Designer.cs">
+      <DependentUpon>Votes.cs</DependentUpon>
+    </Compile>
+    <None Include="ElectionDatabaseDataSet14.xsc">
+      <DependentUpon>ElectionDatabaseDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet14.xss">
+      <DependentUpon>ElectionDatabaseDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet15.xsc">
+      <DependentUpon>ElectionDatabaseDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet15.xss">
+      <DependentUpon>ElectionDatabaseDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet16.xsc">
+      <DependentUpon>ElectionDatabaseDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet16.xss">
+      <DependentUpon>ElectionDatabaseDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet17.xsc">
+      <DependentUpon>ElectionDatabaseDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet17.xss">
+      <DependentUpon>ElectionDatabaseDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet18.xsc">
+      <DependentUpon>ElectionDatabaseDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet18.xss">
+      <DependentUpon>ElectionDatabaseDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet19.xsc">
+      <DependentUpon>ElectionDatabaseDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet19.xss">
+      <DependentUpon>ElectionDatabaseDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet20.xsc">
+      <DependentUpon>ElectionDatabaseDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet20.xss">
+      <DependentUpon>ElectionDatabaseDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet21.xsc">
+      <DependentUpon>ElectionDatabaseDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet21.xss">
+      <DependentUpon>ElectionDatabaseDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet22.xsc">
+      <DependentUpon>ElectionDatabaseDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet22.xss">
+      <DependentUpon>ElectionDatabaseDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet231.xsc">
+      <DependentUpon>ElectionDatabaseDataSet231.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet231.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet231.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet231.xss">
+      <DependentUpon>ElectionDatabaseDataSet231.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet24.xsc">
+      <DependentUpon>ElectionDatabaseDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet24.xss">
+      <DependentUpon>ElectionDatabaseDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet25.xsc">
+      <DependentUpon>ElectionDatabaseDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet25.xss">
+      <DependentUpon>ElectionDatabaseDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\voterbtn.png" />
+    <None Include="Resources\icons8-admin-30 %281%291.png" />
+    <None Include="Resources\icons8-overview-308.png" />
+    <None Include="Resources\icons8-overview-307.png" />
+    <None Include="Resources\icons8-vote-30 %281%293.png" />
+    <None Include="Resources\icons8-ballot-305.png" />
+    <None Include="Resources\icons8-overview-306.png" />
+    <None Include="Resources\PH ELECTIONS2.png" />
+    <None Include="Resources\PH ELECTIONS1.png" />
+    <None Include="ElectionDatabaseDataSet10.xsc">
+      <DependentUpon>ElectionDatabaseDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet10.xss">
+      <DependentUpon>ElectionDatabaseDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet11.xsc">
+      <DependentUpon>ElectionDatabaseDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet11.xss">
+      <DependentUpon>ElectionDatabaseDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet12.xsc">
+      <DependentUpon>ElectionDatabaseDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet12.xss">
+      <DependentUpon>ElectionDatabaseDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet13.xsc">
+      <DependentUpon>ElectionDatabaseDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet13.xss">
+      <DependentUpon>ElectionDatabaseDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet8.xsc">
+      <DependentUpon>ElectionDatabaseDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet8.xss">
+      <DependentUpon>ElectionDatabaseDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet9.xsc">
+      <DependentUpon>ElectionDatabaseDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet9.xss">
+      <DependentUpon>ElectionDatabaseDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Untitled design %283%291.png" />
+    <None Include="Resources\icons8-filter-30.png" />
+    <None Include="Resources\icons8-arrow-30 %282%29.png" />
+    <None Include="Resources\icons8-arrow-30 %281%29.png" />
+    <None Include="Resources\icons8-delete-table-301.png" />
+    <None Include="Resources\icons8-table-properties-303.png" />
+    <None Include="Resources\icons8-insert-table-304.png" />
+    <None Include="Resources\bgbtn1.png" />
+    <None Include="Resources\icons8-table-properties-302.png" />
+    <None Include="Resources\icons8-table-properties-301.png" />
+    <None Include="Resources\icons8-insert-table-303.png" />
+    <None Include="Resources\icons8-insert-table-302.png" />
+    <None Include="Resources\icons8-insert-table-301.png" />
+    <None Include="Resources\icons8-refresh-30 %281%29.png" />
+    <None Include="Resources\icons8-delete-table-30.png" />
+    <None Include="Resources\icons8-table-properties-30.png" />
+    <None Include="Resources\icons8-insert-table-30.png" />
+    <None Include="Resources\bgbtn.png" />
+    <None Include="Resources\dropshadow %281%29.png" />
+    <None Include="Resources\23.png" />
+    <None Include="Resources\dropshadow.png" />
+    <None Include="Resources\Untitled design %283%29.png" />
+    <None Include="Resources\Untitled design %282%29.png" />
+    <None Include="Resources\PH ELECTIONS.png" />
+    <None Include="Resources\Blue Red Yellow and White Bold and Refined Voter Empowerment Campaign Sticker.png" />
+    <None Include="Resources\icons8-overview-305.png" />
+    <None Include="Resources\icons8-admin-304.png" />
+    <None Include="Resources\icons8-vote-30 %282%291.png" />
+    <None Include="Resources\icons8-vote-30 %281%292.png" />
+    <None Include="Resources\icons8-overview-30 %281%294.png" />
+    <None Include="Resources\icons8-ballot-30 %282%298.png" />
+    <None Include="Resources\icons8-ballot-30 %282%297.png" />
+    <None Include="Resources\cityhall_facade.jpg" />
+    <None Include="Resources\22.png" />
+    <None Include="Resources\icons8-ballot-304.png" />
+    <None Include="Resources\icons8-vote-30 %281%291.png" />
+    <None Include="Resources\icons8-ballot-30 %282%296.png" />
+    <None Include="Resources\icons8-ballot-303.png" />
+    <None Include="Resources\icons8-ballot-30 %282%295.png" />
+    <None Include="Resources\icons8-ballot-30 %282%294.png" />
+    <None Include="Resources\icons8-vote-30 %282%29.png" />
+    <None Include="Resources\icons8-vote-30 %281%29.png" />
+    <None Include="Resources\icons8-ballot-30 %282%293.png" />
+    <None Include="Resources\icons8-overview-30 %281%293.png" />
+    <None Include="Resources\icons8-ballot-30 %282%292.png" />
+    <None Include="Resources\icons8-ballot-30 %282%291.png" />
+    <None Include="Resources\icons8-ballot-302.png" />
+    <None Include="Resources\icons8-profile-30.png" />
+    <None Include="Resources\icons8-vote-30.png" />
+    <None Include="Resources\icons8-leaderboard-30 %282%29.png" />
+    <None Include="Resources\icons8-ballot-301.png" />
+    <None Include="Resources\icons8-overview-304.png" />
+    <None Include="Resources\icons8-overview-303.png" />
+    <EmbeddedResource Include="LoadingScreen.resx">
+      <DependentUpon>LoadingScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCandidates.resx">
+      <DependentUpon>UserCandidates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserProfile.resx">
+      <DependentUpon>UserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserViewCandidateInfo.resx">
+      <DependentUpon>UserViewCandidateInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserVote.resx">
+      <DependentUpon>UserVote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Votes.resx">
+      <DependentUpon>Votes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\icons8-overview-302.png" />
+    <None Include="Resources\icons8-right-arrow-30.png" />
+    <None Include="Resources\icons8-arrow-30.png" />
+    <None Include="Resources\icons8-elections-30 %282%294.png" />
+    <None Include="Resources\icons8-overview-30 %281%292.png" />
+    <None Include="Resources\icons8-overview-30 %281%291.png" />
+    <None Include="Resources\icons8-admin-303.png" />
+    <None Include="Resources\icons8-queue-30 %282%293.png" />
+    <None Include="Resources\icons8-queue-30 %282%292.png" />
+    <None Include="Resources\icons8-queue-30 %282%291.png" />
+    <None Include="Resources\icons8-overview-30 %281%29.png" />
+    <None Include="Resources\icons8-elections-30 %282%293.png" />
+    <None Include="Resources\icons8-elections-30 %282%292.png" />
+    <None Include="Resources\icons8-queue-30 %282%29.png" />
+    <None Include="Resources\icons8-elections-30 %282%291.png" />
+    <None Include="Resources\icons8-elections-30 %282%29.png" />
+    <None Include="Resources\icons8-search-303.png" />
+    <None Include="Resources\icons8-search-302.png" />
+    <None Include="Resources\icons8-back-303.png" />
+    <None Include="ElectionDatabaseDataSet1.xsc">
+      <DependentUpon>ElectionDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet1.xss">
+      <DependentUpon>ElectionDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet2.xsc">
+      <DependentUpon>ElectionDatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet2.xss">
+      <DependentUpon>ElectionDatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet3.xsc">
+      <DependentUpon>ElectionDatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet3.xss">
+      <DependentUpon>ElectionDatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet4.xsc">
+      <DependentUpon>ElectionDatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet4.xss">
+      <DependentUpon>ElectionDatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet5.xsc">
+      <DependentUpon>ElectionDatabaseDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet5.xss">
+      <DependentUpon>ElectionDatabaseDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet6.xsc">
+      <DependentUpon>ElectionDatabaseDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet6.xss">
+      <DependentUpon>ElectionDatabaseDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet7.xsc">
+      <DependentUpon>ElectionDatabaseDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet7.xss">
+      <DependentUpon>ElectionDatabaseDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\icons8-search-301.png" />
+    <None Include="Resources\icons8-back-302.png" />
+    <None Include="Resources\icons8-back-301.png" />
+    <None Include="Resources\icons8-refresh-301.png" />
+    <None Include="Resources\icons8-delete-database-302.png" />
+    <None Include="Resources\icons8-edit-302.png" />
+    <None Include="Resources\icons8-add-new-302.png" />
+    <None Include="Resources\icons8-refresh-30.png" />
+    <None Include="Resources\icons8-add-new-301.png" />
+    <None Include="Resources\icons8-edit-301.png" />
+    <None Include="Resources\icons8-delete-database-301.png" />
+    <None Include="Resources\icons8-back-30.png" />
+    <EmbeddedResource Include="AdminVotes.resx">
+      <DependentUpon>AdminVotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserVoteCandidate.resx">
+      <DependentUpon>UserVoteCandidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserListCandidates.resx">
+      <DependentUpon>UserListCandidates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLandingPage.resx">
+      <DependentUpon>UserLandingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoterUpdate.resx">
+      <DependentUpon>VoterUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\icons8-menu-452.png" />
+    <None Include="Resources\icons8-add-new-30.png" />
+    <None Include="Resources\icons8-delete-database-30.png" />
+    <None Include="Resources\icons8-append-text-301.png" />
+    <None Include="Resources\icons8-append-text-30.png" />
+    <None Include="Resources\icons8-edit-30.png" />
+    <None Include="Resources\icons8-update-30.png" />
+    <None Include="Resources\icons8-upload-30.png" />
+    <None Include="Resources\icons8-admin-302.png" />
+    <None Include="Resources\icons8-close-30 %281%29.png" />
+    <None Include="Resources\icons8-macos-maximize-30.png" />
+    <None Include="Resources\icons8-minimize-30.png" />
+    <None Include="Resources\icons8-minimize-20.png" />
+    <None Include="Resources\icons8-search-30.png" />
+    <None Include="Resources\icons8-admin-30 %281%29.png" />
+    <None Include="Resources\icons8-admin-301.png" />
+    <None Include="Resources\icons8-logout-30 %281%29.png" />
+    <None Include="Resources\icons8-queue-30 %281%291.png" />
+    <None Include="Resources\icons8-leaderboard-30 %281%29.png" />
+    <None Include="Resources\icons8-queue-30 %281%29.png" />
+    <None Include="Resources\icons8-elections-30 %281%29.png" />
+    <None Include="Resources\icons8-ballot-30 %282%29.png" />
+    <None Include="Resources\icons8-ballot-30 %281%29.png" />
+    <None Include="Resources\icons8-overview-301.png" />
+    <None Include="Resources\icons8-admin-30.png" />
+    <None Include="Resources\icons8-overview-30.png" />
+    <None Include="Resources\OVS - Logo %281%29 15.png" />
+    <EmbeddedResource Include="AdminDashb.resx">
+      <DependentUpon>AdminDashb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CandidateCreate.resx">
+      <DependentUpon>CandidateCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CandidateDelete.resx">
+      <DependentUpon>CandidateDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CandidateUpdate.resx">
+      <DependentUpon>CandidateUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidacy.resx">
+      <DependentUpon>Candidacy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineVoting.resx">
+      <DependentUpon>OnlineVoting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LandingPage.resx">
+      <DependentUpon>LandingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLogin.resx">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoterCreate.resx">
+      <DependentUpon>VoterCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoterDelete.resx">
+      <DependentUpon>VoterDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VotersCRUD.resx">
+      <DependentUpon>VotersCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ElectionDatabaseDataSet.xsc">
+      <DependentUpon>ElectionDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ElectionDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectionDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectionDatabaseDataSet.xss">
+      <DependentUpon>ElectionDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="VotersDatabaseDataSet.xsc">
+      <DependentUpon>VotersDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VotersDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VotersDatabaseDataSet.xss">
+      <DependentUpon>VotersDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet1.xsc">
+      <DependentUpon>VotersDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VotersDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VotersDatabaseDataSet1.xss">
+      <DependentUpon>VotersDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet10.xsc">
+      <DependentUpon>VotersDatabaseDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VotersDatabaseDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VotersDatabaseDataSet10.xss">
+      <DependentUpon>VotersDatabaseDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet11.xsc">
+      <DependentUpon>VotersDatabaseDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VotersDatabaseDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VotersDatabaseDataSet11.xss">
+      <DependentUpon>VotersDatabaseDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet2.xsc">
+      <DependentUpon>VotersDatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VotersDatabaseDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VotersDatabaseDataSet2.xss">
+      <DependentUpon>VotersDatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet3.xsc">
+      <DependentUpon>VotersDatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VotersDatabaseDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VotersDatabaseDataSet3.xss">
+      <DependentUpon>VotersDatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet4.xsc">
+      <DependentUpon>VotersDatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VotersDatabaseDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VotersDatabaseDataSet4.xss">
+      <DependentUpon>VotersDatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet5.xsc">
+      <DependentUpon>VotersDatabaseDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VotersDatabaseDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VotersDatabaseDataSet5.xss">
+      <DependentUpon>VotersDatabaseDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet6.xsc">
+      <DependentUpon>VotersDatabaseDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VotersDatabaseDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VotersDatabaseDataSet6.xss">
+      <DependentUpon>VotersDatabaseDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet7.xsc">
+      <DependentUpon>VotersDatabaseDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VotersDatabaseDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VotersDatabaseDataSet7.xss">
+      <DependentUpon>VotersDatabaseDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet8.xsc">
+      <DependentUpon>VotersDatabaseDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VotersDatabaseDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VotersDatabaseDataSet8.xss">
+      <DependentUpon>VotersDatabaseDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet9.xsc">
+      <DependentUpon>VotersDatabaseDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="VotersDatabaseDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VotersDatabaseDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VotersDatabaseDataSet9.xss">
+      <DependentUpon>VotersDatabaseDataSet9.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-expand-arrow-251.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dashboard-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db451.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voters.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\votes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-leaderboard-451.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candidateslogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-drop-down-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-drop-down-251.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-45 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-administrator-male-451.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-451.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dashboard-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ballot-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-elections-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-queue-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-leaderboard-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-report-451.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OVS - Logo %281%29 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-male-user-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-male-user-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backdrop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-news-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-announcement-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OVS - Logo %281%29 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OVS - Logo %281%29 13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OVS - Logo %281%29 14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backdrop1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-timer-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-time-limit-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-volunteer-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SliderImages\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
